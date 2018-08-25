@@ -9,10 +9,16 @@ body{
     transition: height 2s;
 }
 #nav-links{
-    height: 100px;
-    transition: height 2s;
+    height: 80px;
+    transition: height 2s, padding-top 2s;
     margin: 0;
-    padding: 10px 0 0 0;
+    padding: 20px 0 0 0;
+}
+.nav-link{
+    text-decoration: none;
+}
+.nav-link:hover{
+    background-color: yellow;
 }
 header{
     height: 100px;
