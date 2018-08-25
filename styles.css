@@ -1,3 +1,37 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#logo{
+    /* width: 200px; */
+    height: 100px;
+    width: auto;
+    transition: height 2s;
+}
+#nav-links{
+    height: 100px;
+    transition: height 2s;
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+header{
+    height: 100px;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 200px;
+    /* align-items: flex-end; */
+    background-color: #f1f1f1;
+    position: fixed;
+    transition: height 2s;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+footer{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 1fr;
+}
 #nav-links{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -11,4 +45,36 @@ ul {
 .nav-link{
     color: #000;
     text-decoration: none;
+}
+.parallax {
+    /* https://medium.com/@kswanie21/the-simplicity-of-parallax-82ff7896e43 */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    position: relative;
+    width: 100vw;
+    background-image: url('images/fredrick-kearney-jr-220626-unsplash.jpg')
+}
+#services{
+    background-color: bisque;
+}
+#services ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    padding: 2em;
+}
+#services li{
+    padding: 30px;
+    width: 150px;
+}
+h2,h3{
+    margin: 0;
+    text-align: center
+}
+section{
+    padding: 10vh 10vw
 }
