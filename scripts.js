@@ -29,17 +29,32 @@ function scrollFunction(){
     }
 }
 
-function toggleMenu(){
-    navLink = document.getElementsByClassName("nav-link");
-    if(navLink[0].offsetParent === null){
-        console.log('fired')
-        for(i=0;i<navLink.length;i++){
-            navLink[i].style.display="inline";
-        }
-    } else {
-        for(i=0;i<navLink.length;i++){
-            navLink[i].style.display="none"; 
-    }
-}
-    
-}
+// function toggleMenu(){
+    // navLink = document.getElementsByClassName("nav-link");
+    // if(navLink[0].offsetParent === null){
+    //     for(i=0;i<navLink.length;i++){
+    //         navLink[i].style.display="inline";
+    //     }
+    // } else {
+    //     for(i=0;i<navLink.length;i++){
+    //         navLink[i].style.display="none"; 
+
+//     }
+// }
+    // var x = document.getElementById("nav-links");
+//     if (x.className === "topnav"){
+//         x.className += " toggle";
+//         window.addEventListener("click", clickOutsideMenu())
+//     } else {
+//         x.className = "topnav";
+//     }
+// }
+// function clickOutsideMenu(event){
+//     var x = document.getElementById("nav-links");
+//     console.log('clicked outside')
+//     if (event.target != x && event.target.parentNode != x){
+//     if (x.classList.contains('toggle')){
+//         console.log('and fired close function')
+//         x.className = "topnav"
+//     }}
+// }
