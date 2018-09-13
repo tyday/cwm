@@ -30,6 +30,7 @@ function scrollFunction(){
 }
 
 // function toggleMenu(){
+    
     // navLink = document.getElementsByClassName("nav-link");
     // if(navLink[0].offsetParent === null){
     //     for(i=0;i<navLink.length;i++){

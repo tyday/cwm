@@ -1,41 +1,43 @@
 :root{
-    --color-one: #0f7682;/*#4FA45A;*/
-    --color-two: #18bbcd;
-    --color-three: #3f7b81;
-    --color-four: hsl(186, 21%, 80%)/*#66969b*/;
+    --color-one: hsl(243,97%,98%,96%); /*#9f9dc6; #0f7682;#4FA45A;*/
+    --color-two: hsl(243,97%,92%); /*#18bbcd;*/
+    --color-three: hsl(243,50%, 70%);
+    --color-four: hsl(243, 21%, 80%)/*#66969b*/;
 }
 body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 #logo{
-    /* width: 200px; */
     height: 100px;
-    /* width: auto; */
     transition: height 1s;
+    filter:drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.24))
 }
 #nav-links{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
-    height: 80px;
-    /* transition: height 2s, padding-top 2s; */
+    height: 100%;
     margin: 0;
     padding: 0;
     transition: 1s;
 }
 .nav-link{
+    align-self: center;
+    transition: padding 1s;
+}
+#nav-links a{
+    display: flex;
+    justify-content: center;
     text-decoration: none;
-    height: 20px;
-    padding: 40px 0;
-    background-color: var(--color-one);
-    transition: padding 1s, background-color 1s;
+    transition: padding 1s, background-color .5s;
+    font-weight: bold;
+}
+#nav-links a:hover{
+    background-color: var(--color-two);
 }
 .nav-link a, .iconMenu a{
     text-decoration: none;
-}
-.nav-link:hover, .iconMenu:hover{
-    background-color: var(--color-two);
 }
 .iconMenu{
     display: none;
@@ -48,7 +50,7 @@ header{
     height: 100px;
     display:grid;
     grid-template-columns: 1fr 2fr;
-    grid-column-gap: 25vw;
+    grid-column-gap: 15vw;
     background-color: var(--color-one);
     position: fixed;
     transition: height 1s;
@@ -86,15 +88,35 @@ ul {
 }
 .parallax {
     /* https://medium.com/@kswanie21/the-simplicity-of-parallax-82ff7896e43 */
-    background-attachment: fixed;
+    
+    padding: 0px;
+    margin-top: 100px;
+    /* background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     height: 60vh;
     position: relative;
     /* width: 100vw; */
-    background-image: url('images/fredrick-kearney-jr-220626-unsplash.jpg');
+    /* background-image: url('images/fredrick-kearney-jr-220626-unsplash.jpg'); */
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('images/fredrick-kearney-jr-220626-unsplash.jpg') */
+}
+.parallax_video{
+    /* height:60vh;
+    position: relative; */
+    /* top:0;
+    left:0;
+    position: absolute; */
+    width: 100%;
+    /* height: 100%; */
+    height: 60vh;
+    object-fit: cover;
+    /* display: none; */
+}
+.parallax_image{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 .parallax-text {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -126,7 +148,11 @@ ul {
 }
 h2,h3{
     margin: 0 0 1rem 0;
-    text-align: center
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+p, body{
+    font-family: 'Raleway', sans-serif;
 }
 section{
     padding: 10vh 10vw
@@ -140,18 +166,19 @@ a{
         /* visibility: visible; */
         display: inline;
     }
-    /* .nav-link {
-        display: none; 
-        padding: 15px 0px;
-    } */
-    #nav-links li:not(:first-child){
+    #nav-links a:not(:first-child){
         display: none;
         padding: 15px 0px;
+        
+        background-color: var(--color-one);
+    }
+    #nav-links a:hover:not(:first-child){
+        background-color: var(--color-two);
     }
     #nav-links{
         grid-template-columns: 1fr;
     }
-    #nav-links:hover li:not(:first-child){
+    #nav-links:hover a:not(:first-child){
         display: inline;
     }
     #headerID{
@@ -167,10 +194,21 @@ a{
             "contact"
             "legal"
     }
+    .parallax{
+        margin-top: 50px;
+    }
     
 }
 @media screen and (max-width: 600px){
-    #nav-links.toggle li{
+    #nav-links.toggle a{
         display: block;
+    }
+    .parallax_video{
+        display: none;
+    }
+}
+@media screen and (min-width: 601px){
+    .parallax_image{
+        display: none;
     }
 }
