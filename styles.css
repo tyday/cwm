@@ -1,5 +1,5 @@
 :root{
-    --color-one: hsl(243,97%,98%,96%); /*#9f9dc6; #0f7682;#4FA45A;*/
+    --color-one: hsla(243,97%,98%,.96); /*#9f9dc6; #0f7682;#4FA45A;*/
     --color-two: hsl(243,97%,92%); /*#18bbcd;*/
     --color-three: hsl(243,50%, 70%);
     --color-four: hsl(243, 21%, 80%)/*#66969b*/;
@@ -68,6 +68,27 @@ footer{
 }
 footer ul{
     margin:0;
+}
+#aboutus{
+    /* display:grid;
+    grid-template-columns: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-columns: 50% 50%;
+    /* grid-template-rows: auto;
+    grid-column-gap: 1em;
+    grid-template-areas: 
+    "header header"
+    "photo words"
+    "photo words"; */
+
+}
+.about_flex{
+    display: flex;
+    flex-direction: row;
+}
+.about_flex img{
+    max-width: 100%;
+    margin: 1em;
 }
 #legalese{
     grid-area: legal;
