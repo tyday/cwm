@@ -1,8 +1,10 @@
 :root{
-    --color-one: hsla(243,97%,98%,.96); /*#9f9dc6; #0f7682;#4FA45A;*/
-    --color-two: hsl(243,97%,92%); /*#18bbcd;*/
-    --color-three: hsl(243,50%, 70%);
-    --color-four: hsl(243, 21%, 80%)/*#66969b*/;
+    --color-one: hsla(223,97%,98%,1); /*#9f9dc6; #0f7682;#4FA45A;*/
+    --color-two: hsl(223,97%,92%); /*#18bbcd;*/
+    --color-three: hsl(223,50%, 30%);/* footer background*/
+    --color-four: hsl(223, 61%, 85%)/*#66969b*/;
+    --color-five: hsl(223, 21%, 90%); /* footer text*/
+    --color-six: hsl(223,100%,5%);
 }
 body{
     margin: 0;
@@ -72,10 +74,17 @@ footer ul{
 .about_flex{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .about_flex img{
-    max-width: 100%;
+    min-width: 100px;
+    max-width: 200px;
     margin: 1em;
+    object-fit: contain;
+}
+.about_flex p{
+    flex-basis: 200px;
+    flex-grow: 2;
 }
 #legalese{
     grid-area: legal;
@@ -99,14 +108,14 @@ ul {
     
     padding: 0px;
     margin-top: 100px;
-    /* background-attachment: fixed;
-    background-position: center;
+    background-attachment: fixed;
+    background-position: 0 20px;
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
     height: 60vh;
     position: relative;
-    /* width: 100vw; */
-    /* background-image: url('images/fredrick-kearney-jr-220626-unsplash.jpg'); */
+    width: 100vw;
+    background-image: url('images/AdobeStock_192209375.jpeg');
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('images/fredrick-kearney-jr-220626-unsplash.jpg') */
 }
 .parallax_video{
@@ -168,6 +177,9 @@ section{
 a{
     color: #000;
 }
+footer a, footer div{
+    color: var(--color-five);
+}
 @media screen and (max-width: 600px){
     
     .iconMenu {
@@ -211,12 +223,12 @@ a{
     #nav-links.toggle a{
         display: block;
     }
-    .parallax_video{
+    /* .parallax_video{
         display: none;
-    }
+    } */
 }
 @media screen and (min-width: 601px){
-    .parallax_image{
+    /* .parallax_image{
         display: none;
-    }
+    } */
 }
